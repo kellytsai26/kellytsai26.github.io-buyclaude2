@@ -1,262 +1,150 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8" />
-<title>Claude 方案與功能說明</title>
-<style>
- body {
- font-family: "Noto Sans TC", Arial, sans-serif;
- margin: 24px;
- color: #222;
- }
- h2 {
- border-bottom: 3px solid #c40018;
- padding-bottom: 6px;
- }
- table {
- width: 100%;
- border-collapse: collapse;
- margin-top: 16px;
- }
- th, td {
- border: 1px solid #555;
- padding: 10px;
- vertical-align: top;
- font-size: 14px;
- }
- th {
- background-color: #1f497d;
- color: #fff;
- text-align: center;
- }
- .subhead {
- background-color: #305f9e;
- color: #fff;
- text-align: center;
- }
- .center {
- text-align: center;
- }
- .check {
- color: #1aa14a;
- font-weight: bold;
- text-align: center;
- }
- section {
- margin-bottom: 48px;
- }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude 方案比較</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans TC', sans-serif; }
+        .gradient-border {
+            position: relative;
+            background: linear-gradient(to right, #d97706, #f59e0b);
+            padding: 1px;
+            border-radius: 1rem;
+        }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-900 antialiased py-12 px-4">
 
-<body>
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl mb-4">
+                選擇最適合您的 Claude 方案
+            </h1>
+            <p class="text-lg text-gray-600">從個人體驗到企業協作，提供多樣化的智能支援。</p>
+        </div>
 
-<!-- ===== Page 1：Claude 方案比較 ===== -->
-<section>
- <h2>Claude 方案比較</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-bold mb-2">免費</h3>
+                <div class="text-4xl font-bold mb-6">$0<span class="text-sm font-normal text-gray-500">/月</span></div>
+                <div class="flex-grow">
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+                            <span>基本額度，每 5 小時重置</span>
+                        </li>
+                        <li class="flex items-start text-gray-500">
+                            <svg class="h-6 w-6 text-gray-300 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+                            <span>適合初步接觸用戶</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="w-full py-3 px-4 bg-gray-100 text-gray-800 font-semibold rounded-lg hover:bg-gray-200 transition-colors">立即開始</button>
+            </div>
 
- <table>
- <tr>
- <th>方案</th>
- <th>免費</th>
- <th>Pro</th>
- <th>Max</th>
- <th colspan="2">Team</th>
- </tr>
- <tr class="subhead">
- <th></th>
- <th></th>
- <th></th>
- <th></th>
- <th>標準</th>
- <th>Premium</th>
- </tr>
+            <div class="bg-white rounded-2xl shadow-xl border-2 border-amber-500 p-8 flex flex-col relative transform lg:scale-105 z-10">
+                <div class="absolute top-0 right-8 -translate-y-1/2 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">熱門推薦</div>
+                <h3 class="text-xl font-bold mb-2">Pro</h3>
+                <div class="text-4xl font-bold mb-1">$20<span class="text-sm font-normal text-gray-500">/月</span></div>
+                <div class="text-sm text-gray-400 mb-6">約 NT$600</div>
+                <div class="flex-grow">
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-amber-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+                            <span class="font-semibold">5 倍使用量 (相較免費版)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-amber-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+                            <span>解鎖進階模型與開發工具</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="w-full py-3 px-4 bg-amber-500 text-white font-semibold rounded-lg hover:bg-amber-600 shadow-md transition-colors">升級 Pro</button>
+            </div>
 
- <tr>
- <td class="center"><b>價格</b></td>
- <td class="center">$0</td>
- <td class="center">$20 / 月<br>(約 NT$600)</td>
- <td>
- • Max 5x：$100 / 月<br>
- • Max 20x：$200 / 月
- </td>
- <td>
- • $25 / 月 / 位<br>
- • $20 / 月 / 位（年繳）
- </td>
- <td>
- • $125 / 月 / 位<br>
- • $100 / 月 / 位（年繳）
- </td>
- </tr>
+            <div class="bg-gray-900 rounded-2xl shadow-sm p-8 flex flex-col text-white">
+                <h3 class="text-xl font-bold mb-2">Max</h3>
+                <div class="text-3xl font-bold mb-1">$100 - $200<span class="text-sm font-normal text-gray-400">/月</span></div>
+                <div class="text-xs text-gray-500 mb-6">依 5x 或 20x 額度調整</div>
+                <div class="flex-grow">
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+                            <span class="text-blue-200">最高 Pro 的 20 倍容量</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-blue-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+                            <span>專為高強度重度使用者設計</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="w-full py-3 px-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors">聯絡銷售</button>
+            </div>
 
- <tr>
- <td class="center"><b>使用容量</b></td>
- <td>基本額度，每 5 小時重置一次</td>
- <td>免費版的 5 倍</td>
- <td>
- • Max 5x：Pro 的 5 倍<br>
- • Max 20x：Pro 的 20 倍
- </td>
- <td>多於 Pro</td>
- <td>標準的 5 倍</td>
- </tr>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 flex flex-col hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-bold mb-2 text-indigo-600">Team / Premium</h3>
+                <div class="text-3xl font-bold mb-1">$25+<span class="text-sm font-normal text-gray-500">/月/位</span></div>
+                <div class="text-xs text-gray-400 mb-6">年繳方案更優惠</div>
+                <div class="flex-grow">
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+                            <span>集中帳戶管理與隱私保護</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-indigo-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="5 13l4 4L19 7"></path></svg>
+                            <span>具備共同協作需求 (至少5人)</span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="w-full py-3 px-4 border-2 border-indigo-600 text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transition-colors">建立團隊</button>
+            </div>
 
- <tr>
- <td class="center"><b>適合對象</b></td>
- <td class="center">個人</td>
- <td class="center">個人 / 小型團隊</td>
- <td class="center">大型企業</td>
- <td colspan="2">
- • 多個使用者共享一個帳戶<br>
- • 具共同協作及集中管理需求<br>
- • 至少 5 個成員
- </td>
- </tr>
+        </div>
 
- <tr>
- <td class="center"><b>總結</b></td>
- <td>
- 零成本體驗 Claude 核心對話能力，適合個人或初次接觸的用戶。
- </td>
- <td>
- 解鎖進階模型與開發工具，適合個人用戶與提升生產力的使用情境。
- </td>
- <td>
- 專為高重度使用者設計，提供無檢流量、最高效能與不中斷的工作條件。
- </td>
- <td colspan="2">
- 提供團隊共享、管理與隱私保護，協助組織安全且高效地協作使用 Claude。
- </td>
- </tr>
- </table>
-</section>
-
-<!-- ===== Page 2：功能比較 ===== -->
-<section>
- <h2>功能比較</h2>
-
- <table>
- <tr>
- <th>類別</th>
- <th>功能</th>
- <th>免費</th>
- <th>Pro</th>
- <th>Max</th>
- <th>Team</th>
- </tr>
-
- <tr>
- <td rowspan="6">基礎</td>
- <td>內容生成 / 搜尋 / 翻譯 / 語言功能</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- </tr>
- <tr>
- <td>工具（app / code / 文案）</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- </tr>
- <tr>
- <td>執行程式碼 / 自訂使用者偏好</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- </tr>
-
- <tr>
- <td rowspan="4">進階</td>
- <td>Skills / Connectors / Projects / Research</td>
- <td></td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- </tr>
- <tr>
- <td>Claude for Excel / PPT / Chrome / Slack</td>
- <td></td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- </tr>
-
- <tr>
- <td rowspan="3">模型</td>
- <td>Opus / Sonnet / Haiku</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- <td class="check">✓</td>
- </tr>
-
- <tr>
- <td rowspan="2">團隊</td>
- <td>專案分享與協作</td>
- <td></td>
- <td></td>
- <td></td>
- <td class="check">✓</td>
- </tr>
- <tr>
- <td>企業級管理與權限控管</td>
- <td></td>
- <td></td>
- <td></td>
- <td class="check">✓</td>
- </tr>
- </table>
-</section>
-
-<!-- ===== Page 3：三大核心功能 ===== -->
-<section>
- <h2>三大核心功能</h2>
-
- <table>
- <tr>
- <th width="35%">應用模式</th>
- <th>案例說明</th>
- </tr>
-
- <tr>
- <td><b>模式一：知識注入</b><br>將組織規範、風格指南與領域知識轉為 Skill</td>
- <td>
- API 規範、品牌文案風格、程式命名規則等，讓 Claude 在寫作或開發時自動遵循。
- </td>
- </tr>
-
- <tr>
- <td><b>模式二：任務自動化</b><br>固定流程轉為 Skill，自動執行</td>
- <td>
- 每週報告整理、收件匣分類、費用報表設定後自動完成。
- </td>
- </tr>
-
- <tr>
- <td><b>模式三：腳本執行</b><br>自動產出 HTML、流程或 API</td>
- <td>
- 一鍵生成互動式前端模組，或產生 API 文件。
- </td>
- </tr>
-
- <tr>
- <td><b>模式四：團隊標準化</b><br>跨團隊共用 Skill</td>
- <td>
- 程式審查、行銷文案、資料查詢語法，確保一致性執行。
- </td>
- </tr>
-
- <tr>
- <td><b>模式五：跨工具整合</b><br>串接 Gmail / Drive / Calendar / Sheets</td>
- <td>
- 讀取 Gmail → 更新 Sheets → 建立 Calendar 事件，完成端到端流程。
- </td>
- </tr>
- </table>
-</section>
+        <div class="hidden lg:block mt-24 overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+            <table class="min-w-full divide-y divide-gray-300">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="py-4 pl-6 text-left text-sm font-semibold text-gray-900">方案</th>
+                        <th class="px-3 py-4 text-left text-sm font-semibold text-gray-900">使用容量</th>
+                        <th class="px-3 py-4 text-left text-sm font-semibold text-gray-900">適合對象</th>
+                        <th class="px-3 py-4 text-left text-sm font-semibold text-gray-900">總結</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 bg-white">
+                    <tr>
+                        <td class="whitespace-nowrap py-4 pl-6 text-sm font-medium text-gray-900">免費</td>
+                        <td class="px-3 py-4 text-sm text-gray-500">基本額度 (5小時重置)</td>
+                        <td class="px-3 py-4 text-sm text-gray-500">個人</td>
+                        <td class="px-3 py-4 text-sm text-gray-500 italic">零成本體驗 Claude 核心能力</td>
+                    </tr>
+                    <tr>
+                        <td class="whitespace-nowrap py-4 pl-6 text-sm font-medium text-amber-600">Pro</td>
+                        <td class="px-3 py-4 text-sm text-gray-500">免費版的 5 倍</td>
+                        <td class="px-3 py-4 text-sm text-gray-500">個人 / 小型團隊</td>
+                        <td class="px-3 py-4 text-sm text-gray-500 italic">提升生產力的首選</td>
+                    </tr>
+                    <tr>
+                        <td class="whitespace-nowrap py-4 pl-6 text-sm font-medium text-gray-900">Max</td>
+                        <td class="px-3 py-4 text-sm text-gray-500">最高 Pro 的 20 倍</td>
+                        <td class="px-3 py-4 text-sm text-gray-500">大型企業 / 重度用戶</td>
+                        <td class="px-3 py-4 text-sm text-gray-500 italic">追求最高效能與不中斷</td>
+                    </tr>
+                    <tr>
+                        <td class="whitespace-nowrap py-4 pl-6 text-sm font-medium text-indigo-600">Team</td>
+                        <td class="px-3 py-4 text-sm text-gray-500">高於 Pro 或標準的 5 倍</td>
+                        <td class="px-3 py-4 text-sm text-gray-500">組織協作</td>
+                        <td class="px-3 py-4 text-sm text-gray-500 italic">安全且高效地協助團隊協作</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 </body>
 </html>
