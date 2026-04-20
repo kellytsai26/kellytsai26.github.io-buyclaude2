@@ -3,129 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claude 方案採購比較表</title>
+    <title>Claude 方案採購對照表</title>
     <style>
         :root {
-            --primary-blue: #1e457e;
-            --accent-red: #b32d2e;
-            --light-bg: #f4f7f9;
-            --border-color: #dee2e6;
-            --text-dark: #2d3436;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --accent: #e11d48;
+            --border: #e2e8f0;
+            --header-bg: #1e293b;
         }
 
         body {
-            font-family: "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
-            background-color: #f0f2f5;
-            color: var(--text-dark);
-            line-height: 1.6;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background-color: var(--bg-color);
+            color: #1e293b;
             margin: 0;
-            padding: 40px 15px;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #ffffff;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            color: var(--header-bg);
+            letter-spacing: -0.025em;
+        }
+
+        .table-container {
+            background: var(--card-bg);
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-        }
-
-        .header-section {
-            background: linear-gradient(135deg, var(--primary-blue), #0f2a4d);
-            color: white;
-            padding: 30px;
-            border-bottom: 5px solid var(--accent-red);
-        }
-
-        .header-section h1 {
-            margin: 0;
-            font-size: 28px;
-            letter-spacing: 1px;
-        }
-
-        .table-wrapper {
-            overflow-x: auto;
+            border: 1px solid var(--border);
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 900px;
+            table-layout: fixed;
         }
 
-        /* 標題欄樣式 */
+        /* 表頭樣式 */
         thead th {
-            background-color: #f8f9fa;
-            color: var(--primary-blue);
-            font-weight: 700;
-            padding: 20px 15px;
-            text-align: center;
-            border-bottom: 2px solid var(--border-color);
-        }
-
-        .scheme-header {
-            font-size: 20px;
-            text-transform: uppercase;
-        }
-
-        .sub-header {
-            background-color: #edf2f7;
-            font-size: 14px;
-            color: #4a5568;
-        }
-
-        /* 內容行樣式 */
-        td {
-            padding: 20px 15px;
-            border-bottom: 1px solid #edf2f7;
-            vertical-align: top;
-        }
-
-        .row-label {
-            background-color: #fbfcfd;
+            background-color: var(--header-bg);
+            color: white;
+            padding: 24px 16px;
             font-weight: 600;
-            color: #444;
-            width: 120px;
-            text-align: center;
-            vertical-align: middle;
-            border-right: 1px solid #edf2f7;
+            border-right: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* 價格強調 */
-        .price-tag {
-            display: inline-block;
-            background-color: #fff5f5;
-            color: var(--accent-red);
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
+        thead th:last-child { border-right: none; }
 
-        .currency-note {
-            font-size: 12px;
-            color: #718096;
-            display: block;
-            margin-top: 5px;
-        }
-
-        /* 清單與總結樣式 */
-        ul {
-            margin: 0;
-            padding-left: 18px;
-            font-size: 14px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .summary-text {
-            font-size: 14px;
-            color: #4a5568;
-        }
-
-        /* 懸停效果 */
-        tr:hover td {
-            background-color: #fdf
+        .sub-group {
+            background-color: #334155;
+            font-size: 0.85rem;
+            font-weight: 40
